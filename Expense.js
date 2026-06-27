@@ -24,6 +24,7 @@ showbtn=document.querySelector(".showbtn")
 items=document.querySelector(".items")
 
 showbtn.addEventListener("click",()=>{
+    items.innerHTML="";
     arr.forEach(element => {
         const cnode=document.createElement("p");
         cnode.textContent=`${element.name} : ${element.amount}`
@@ -34,10 +35,12 @@ showbtn.addEventListener("click",()=>{
 })
 
 totalbtn=document.querySelector(".totalbtn")
-sum=0;
+
 calculate=document.querySelector(".calculate")
 
 totalbtn.addEventListener("click",()=>{
+        calculate.innerHTML="";
+        sum=0;
     arr.forEach(element => {
         sum+=element.amount;
     });
